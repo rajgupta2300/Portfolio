@@ -1,5 +1,5 @@
 
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +27,8 @@ const projects: ProjectCardProps[] = [
     description: "A customizable voice assistant that responds to voice commands and performs various tasks.",
     imageSrc: "https://images.unsplash.com/photo-1589254065909-b7086229d08c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     technologies: ["Python", "Speech Recognition", "NLP"],
-    githubLink: "#"
+    githubLink: "#",
+    demoLink: "#"
   },
   {
     title: "Smart Home Control System",
@@ -113,15 +114,6 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <Button asChild variant="outline" size="lg" className="group">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              View All Projects
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
         </div>
       </div>
     </section>

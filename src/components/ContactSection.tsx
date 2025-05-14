@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,7 @@ export default function ContactSection() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,11 +27,30 @@ export default function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Log form data to help with debugging
+    console.log("Sending form data:", formData);
+    
+    // Simulate form submission with proper error handling
     setTimeout(() => {
-      toast.success("Message sent successfully! I'll get back to you soon.");
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitting(false);
+      try {
+        // In a real implementation, this would call an API endpoint to send the email
+        // For now, we're just showing a success message
+        console.log("Email would be sent with:", formData);
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } catch (error) {
+        console.error("Error sending message:", error);
+        toast({
+          variant: "destructive",
+          title: "Message not sent",
+          description: "There was an error sending your message. Please try again later.",
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }, 1500);
   };
 
