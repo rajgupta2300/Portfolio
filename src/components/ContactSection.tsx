@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,7 @@ export default function ContactSection() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,10 +29,19 @@ export default function ContactSection() {
     
     // Simulate form submission
     setTimeout(() => {
-      toast.success("Message sent successfully! I'll get back to you soon.");
+      toast({
+        title: "Message received",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
     }, 1500);
+
+    // Note: To actually send emails, you would need to:
+    // 1. Use a backend service (e.g., Node.js + Express, Supabase, etc.)
+    // 2. Connect to an email service (e.g., SendGrid, Mailgun, etc.)
+    // 3. Make an API call from this form to your backend service
+    // 4. Have the backend service handle the email sending
   };
 
   return (
