@@ -14,22 +14,21 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg">
-              I'm a passionate Python and Full Stack Developer currently pursuing my 
-              B.Tech in Computer Science Engineering (3rd year) at Assam University, Silchar.
+              I'm a passionate technologist with experience in developing AI-powered
+              solutions that make life easier. With a background in computer science
+              and a love for innovation, I focus on creating seamless integrations
+              between software and hardware.
             </p>
             <p>
-              My educational journey includes scoring 84% in Class 10 CBSE from Kendriya 
-              Vidyalaya No. 2 Saltlake, Kolkata, and 87% in Class 12 CBSE from Kendriya 
-              Vidyalaya Narangi, Guwahati.
+              Currently, I'm focused on AI-powered automation, smart home technology,
+              and creating solutions that bridge the gap between complex technologies
+              and everyday users. My goal is to make technology more accessible and
+              useful for everyone.
             </p>
             <p>
-              I specialize in developing AI-powered solutions and full-stack applications. 
-              Currently, I'm focused on AI-powered automation, smart home technology, and 
-              creating solutions that bridge the gap between complex technologies and everyday users.
-            </p>
-            <p>
-              When I'm not coding, you can find me experimenting with new technologies,
-              contributing to open-source projects, or exploring new programming concepts.
+              When I'm not coding, you can find me experimenting with new smart home
+              configurations, contributing to open-source projects, or hiking in nature
+              to disconnect and recharge.
             </p>
             <div>
               <Button asChild>
