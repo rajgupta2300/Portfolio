@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   useEffect(() => {
     // Update the document title
-    document.title = "Alex Morgan - AI & Automation Developer";
+    document.title = "Raj Gupta - AI & Automation Engineer";
 
     // Add smooth scroll behavior
     const handleAnchorClick = (e: MouseEvent) => {
