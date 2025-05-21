@@ -1,4 +1,3 @@
-
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,7 +14,7 @@ interface ProjectCardProps {
 
 const projects: ProjectCardProps[] = [
   {
-    title: "Hand Gesture Volume Control",
+    title: "Hand Gesture Control",
     description: "Control your computer's volume with hand gestures, using computer vision to track hand movements.",
     imageSrc: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     technologies: ["Python", "OpenCV", "MediaPipe"],
@@ -33,7 +32,7 @@ const projects: ProjectCardProps[] = [
   {
     title: "Smart Home Control System",
     description: "Centralized system to control smart home devices with web and mobile interfaces.",
-    imageSrc: "https://images.unsplash.com/photo-1558002038-1055e2fc55a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    imageSrc: "https://plus.unsplash.com/premium_photo-1663054919747-d237d710c70e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Node.js", "MQTT", "Home Assistant", "React"],
     githubLink: "#",
     demoLink: "#"
@@ -51,14 +50,14 @@ const projects: ProjectCardProps[] = [
     description: "A web application that provides weather forecasts using real-time data from weather APIs.",
     imageSrc: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
     technologies: ["JavaScript", "React", "Weather API"],
-    githubLink: "#",
-    demoLink: "#"
+    githubLink: "https://github.com/rajgupta2300/weatherForcast",
+    demoLink: "https://weather2300.netlify.app"
   }
 ];
 
 function ProjectCard({ title, description, imageSrc, technologies, githubLink, demoLink }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden card-hover flex flex-col">
+    <Card className="glass-card overflow-hidden card-hover flex flex-col">
       <div className="h-48 overflow-hidden">
         <img 
           src={imageSrc} 
@@ -99,7 +98,7 @@ function ProjectCard({ title, description, imageSrc, technologies, githubLink, d
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding section-bordered">
       <div className="max-container">
         <div className="space-y-4 mb-12 text-center">
           <p className="text-primary font-medium">My Work</p>
@@ -110,7 +109,7 @@ export default function ProjectsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}

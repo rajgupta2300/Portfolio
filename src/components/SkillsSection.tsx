@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -85,7 +84,7 @@ export default function SkillsSection() {
           </p>
         </div>
 
-        <Card className="animate-scale-in">
+        <Card className="glass-card animate-scale-in">
           <CardContent className="pt-6">
             <Tabs defaultValue="Languages">
               <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">

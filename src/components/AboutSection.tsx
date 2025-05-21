@@ -1,17 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="about" className="section-padding bg-muted/30 section-bordered">
       <div className="max-container">
         <div className="space-y-4 mb-12 text-center">
           <p className="text-primary font-medium">About Me</p>
           <h2 className="text-4xl font-bold">My Background</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="glass-card p-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg">
               I'm a passionate technologist with experience in developing AI-powered
@@ -38,28 +37,31 @@ export default function AboutSection() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <Card className="card-hover">
+            <Card className="glass-card card-hover">
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-1">5+</h3>
-                <p className="text-sm text-muted-foreground">Years Experience</p>
+                <h3 className="text-lg font-bold text-primary mb-1">Class 12 <span className="text-xs text-muted-foreground"> (2021)</span></h3>
+                <p className="text-sm text-muted-foreground">
+                  Kendriya Vidyalaya Narangi, Guwahati<br />
+                  <span className="font-medium">87%</span>
+                </p>
               </CardContent>
             </Card>
-            <Card className="card-hover">
+            <Card className="glass-card card-hover">
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-1">20+</h3>
-                <p className="text-sm text-muted-foreground">Projects Completed</p>
+                <h3 className="text-lg font-bold text-primary mb-1">Class 10 <span className="text-xs text-muted-foreground"> (2019)</span></h3>
+                <p className="text-sm text-muted-foreground">
+                  Kendriya Vidyalaya No. 2 Salt Lake, Kolkata<br />
+                  <span className="font-medium">84%</span>
+                </p>
               </CardContent>
             </Card>
-            <Card className="card-hover">
+            <Card className="glass-card card-hover col-span-2">
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-1">10+</h3>
-                <p className="text-sm text-muted-foreground">Technologies</p>
-              </CardContent>
-            </Card>
-            <Card className="card-hover">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-1">3+</h3>
-                <p className="text-sm text-muted-foreground">Open Source Contributions</p>
+                <h3 className="text-lg font-bold text-primary mb-1">B.Tech (CSE) - 3rd Year</h3>
+                <p className="text-sm text-muted-foreground">
+                  Assam University, Silchar<br />
+                  Currently Pursuing
+                </p>
               </CardContent>
             </Card>
           </div>

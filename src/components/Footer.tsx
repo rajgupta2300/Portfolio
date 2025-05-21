@@ -13,13 +13,13 @@ export default function Footer() {
               Portfolio<span className="text-primary">.</span>
             </p>
             <p className="text-muted-foreground">
-              &copy; {currentYear} Alex Morgan. All rights reserved.
+              &copy; {currentYear} Raj Gupta. All rights reserved.
             </p>
           </div>
           
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://github.com/rajgupta2300"
               className="hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -28,7 +28,7 @@ export default function Footer() {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/rajgupta2300/"
               className="hover:text-primary transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -37,7 +37,7 @@ export default function Footer() {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:alex.morgan@example.com"
+              href="mailto:i.rajgupta2300@gmail.com"
               className="hover:text-primary transition-colors"
               aria-label="Email"
             >
